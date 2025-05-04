@@ -3,7 +3,7 @@ import {UserAddOutlined, ProductOutlined, InboxOutlined,ShoppingCartOutlined,
     UserSwitchOutlined,FileProtectOutlined,BarChartOutlined } from '@ant-design/icons';
 
 const MenuList = () => {
-    return <Menu theme='dark'>
+    return <Menu theme='dark' mode='inline' className='menu-bar'>
         <Menu.Item key="clientes" icon={<UserAddOutlined/>}>
             Clientes
         </Menu.Item>
@@ -19,9 +19,11 @@ const MenuList = () => {
         <Menu.Item key="proveedores" icon={<UserSwitchOutlined/>}>
             Proveedores
         </Menu.Item>
-        <Menu.Item key="examenes" icon={<FileProtectOutlined/>}>
-            Examenes Clinicos
-        </Menu.Item>
+        <Menu.SubMenu key="examenes" icon={<FileProtectOutlined/>}
+        title="Examenes">
+            <Menu.Item key="Consultas">Consultas</Menu.Item>
+            <Menu.Item key="Examenes">Examenes</Menu.Item>
+        </Menu.SubMenu>
         <Menu.Item key="reportes" icon={<BarChartOutlined/>}>
             Reportes
         </Menu.Item>

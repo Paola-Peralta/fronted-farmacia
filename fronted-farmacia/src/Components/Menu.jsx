@@ -1,24 +1,30 @@
-import { Menu }from 'antd'; 
+import { Menu }from 'antd';
+import { Link } from 'react-router-dom';
 import {UserAddOutlined, ProductOutlined, InboxOutlined,ShoppingCartOutlined,
     UserSwitchOutlined,FileProtectOutlined,BarChartOutlined } from '@ant-design/icons';
 
 const MenuList = () => {
     return <Menu theme='dark' mode='inline' className='menu-bar'>
         <Menu.Item key="clientes" icon={<UserAddOutlined/>}>
-            Clientes
+            <Link to="/clientes">Clientes</Link>
         </Menu.Item>
+
         <Menu.Item key="productos" icon={<ProductOutlined/>}>
-            Productos
+           <Link to="/productos">Productos</Link>
         </Menu.Item>
+
         <Menu.Item key="ventas" icon={<InboxOutlined/>}>
-            Ventas
+            <Link to="/ventas">Ventas</Link>
         </Menu.Item>
+
         <Menu.Item key="compras" icon={<ShoppingCartOutlined/>}>
-            Compras
+            <Link to="/compras">Compras</Link>
         </Menu.Item>
+
         <Menu.Item key="proveedores" icon={<UserSwitchOutlined/>}>
-            Proveedores
+            <Link to="/proveedores">Proveedores</Link>
         </Menu.Item>
+
         <Menu.SubMenu key="examenes" icon={<FileProtectOutlined/>}
         title="Examenes">
             <Menu.Item key="Consultas">Consultas</Menu.Item>
